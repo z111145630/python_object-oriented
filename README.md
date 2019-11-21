@@ -22,6 +22,7 @@
 
 ### Python3.4
 
+```python
 class Cat: #{1}
     def __init__(self,name): #{2}
         self.__name = name #{3}
@@ -38,3 +39,4 @@ if __name__=="__main__": #{8}
     
 # output:
 # My name is May. meow~
+```
