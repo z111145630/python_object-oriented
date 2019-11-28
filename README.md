@@ -1,6 +1,6 @@
 # python_object-oriented
 
-# This is an <h1> 物件（object）或者實體（matters）：
+#物件（object）或者實體（matters）：<h2> 
 在 Python 中，物件是資料與程式碼的組合，可以是指整個應用程式或者是應用程式中的一小部分。以生活中的物品為例，我們可以說電腦是一個物件，而組成電腦的 CPU、硬碟等也都可以做為一個物件。
 
 屬性（attribute）或成員變數（member variable）：是用來描述物件（object）的特性。以電腦為例，CPU 等級或者製造商等用來描述電腦的特質就是這個物件的屬性。
