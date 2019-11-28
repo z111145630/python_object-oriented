@@ -1,4 +1,4 @@
-# python物件導向
+# Python物件導向（Object Oriented, OO）
 
 ### 物件（object）或者實體（matters）：
 
@@ -12,6 +12,17 @@
 
 ### 類別（class）：
 是指物件的分類，可以透過類別將物件分門別類，同樣類別的物件有相同的屬性與方法。以電腦這個類別為例，有廠牌、顏色等屬性，以及開機、關機、執行應用程式等方法，那麼 Surface 的筆記型電腦隸屬於電腦這類別，廠牌為 Microsoft，顏色則為銀色，至於 Dell 的筆記型電腦就屬於電腦類別的其他物件。也可以說物件是類別的實體。
+
+```python
+class abc:
+    '''這是一個叫做 abc 的類別''' # Doc string
+    def __init__(self, group, participants):
+        self.group = group
+        self.participants = participants
+
+print(Ironmen)
+```
+
 
 <br>
 <br>
@@ -30,39 +41,5 @@
 
 
 
-### class and object
 
-```python
-class Cat: #{1}
-    def __init__(self,name): #{2}
-        self.__name = name #{3}
 
-    def shout(self): #{4}
-        return "My name is "+self.__name+". meow~" #{5}
-
-def main():
-    cat = Cat("May") #{6}
-    print(cat.shout()) #{7}
-
-if __name__=="__main__": #{8}
-    main()
-    
-# output:
-# My name is May. meow~
-```
-
-(1) 建構Cat的類別，這是Python3的表示方法，如果是使用Python2.7的話，要寫成class Cat(object):才可以。
-
-(2) Python的初始化方法，Python在初始化之前會先自行執行__new__的方法，這個過程會產生一個新的物件，也就是實體化，而這個新的物件會以第一個參數的方法被帶入__init__的方法裡進行初始化，我們通常會命名這個變數為self，這裡的self已經是個物件而不是類別，那初始化的過程需要引入外部資訊name的參數來進行命名，所以第二個參數就要設name，記住喔！第一個參數是Python自動產生的，不是由外部帶入的，所以外部只要給name一個參數就足夠了。
-
-(3) 創造一個私有本地變數__name來將name存入，在Python當中以雙底線__開頭的變數會被視為是「私有的」，效果和Java的private接近，不過Python並沒有這麼嚴格禁止外部去讀取私有變數，所以需要配合工程師的自我規範。
-
-(4) 類別方法shout()，只要你不是靜態的類別方法，Python都會自動幫你帶入物件資訊當作第一個參數，通常命名為self，那為什麼靜態方法沒有自動帶入，因為靜態方法不用實體化，所以根本不擁有物件的資訊。
-
-(5) 使用到本地的self.__name變數
-
-(6) 創造一個物件，在創造的過程會執行初始化，所以必須放入初始化需要的參數name，所以上面的新的物件有了"May"的名字。
-
-(7) 接下來使用cat.shout()去執行喵喵叫的動作，這個方法會回傳字串，再利用print的方法將字串顯示出來。注意！在物件導向的習慣中，會用.來表示在那物件中的方法或屬性，所以cat.shout()就是執行在物件cat中的方法shout()。
-
-(8) 在Python程式執行時，它的__name__會是"__main__"，也就是說會去執行這個if判斷式下面的程式。
