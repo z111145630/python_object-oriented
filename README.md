@@ -22,6 +22,7 @@ class abc:
 
 print(Ironmen)
 ```
+說明：我們使用 class 語法來定義類別，並使用大寫開頭（Capitalized）單字為類別命名，如果對於 __init__ 方法與 self 參數感到困惑，就先記得這是一個特殊的 Python 方法，它用來幫助我們創造屬於這個類別的物件。
 
 
 <br>
@@ -32,6 +33,22 @@ print(Ironmen)
 
 #### • 封裝（encapsulation）：
 將資料與用來處理資料的函式放在一起成為一個類別，稱為「封裝」。
+
+
+```python
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        print("area = ", self.length*self.width)
+
+    def Perimeter(self):
+        print("perimeter = ", 2*(self.width+self.length))
+```
+簡單的說將同一類或者同一物的資料與運算打包起來,就稱之為封裝。
+上面建立了一個矩形類別要求矩形的周長與面積,如果以函式的話,勢必得要有兩次長度與寬度的資料傳入函式,而封裝起來的物件,僅需要直接調用定義的方法(Method)即可
 
 #### • 繼承（inheritance）：
 從原先有的類別定義出新的類別，既有的類別稱為「父類別（parent class）」，而衍伸的新類別叫做「子類別（child class）」。透過 OOP 的繼承特性，可以提高軟體的重複使用性，只要撰寫完成父類別的程式碼，就可以在其他子類別程式碼中重複使用。
