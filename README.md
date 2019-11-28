@@ -15,7 +15,7 @@
 
 ### 物件導向程式設計（Object Oriented Programming, OOP）主要有以下的特徵：
 
-#### * 封裝（encapsulation）：
+#### •封裝（encapsulation）：
 將資料與用來處理資料的函式放在一起成為一個類別，稱為「封裝」。
 
 #### * 繼承（inheritance）：
